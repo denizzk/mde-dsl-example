@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated softwarebundles -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="softwarebundles.presentation.SoftwarebundlesModelWizardID"
+            name="%_UI_SoftwarebundlesModelWizard_label"
+            class="softwarebundles.presentation.SoftwarebundlesModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/SoftwarebundlesModelFile.gif">
+         <description>%_UI_SoftwarebundlesModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated softwarebundles -->
+      <editor
+            id="softwarebundles.presentation.SoftwarebundlesEditorID"
+            name="%_UI_SoftwarebundlesEditor_label"
+            icon="icons/full/obj16/SoftwarebundlesModelFile.gif"
+            extensions="softwarebundles"
+            class="softwarebundles.presentation.SoftwarebundlesEditor"
+            contributorClass="softwarebundles.presentation.SoftwarebundlesActionBarContributor">
+      </editor>
+   </extension>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated jar -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="jar.presentation.JarModelWizardID"
+            name="%_UI_JarModelWizard_label"
+            class="jar.presentation.JarModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/JarModelFile.gif">
+         <description>%_UI_JarModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated jar -->
+      <editor
+            id="jar.presentation.JarEditorID"
+            name="%_UI_JarEditor_label"
+            icon="icons/full/obj16/JarModelFile.gif"
+            extensions="jar"
+            class="jar.presentation.JarEditor"
+            contributorClass="jar.presentation.JarActionBarContributor">
+      </editor>
+   </extension>
+</plugin>

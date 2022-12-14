@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="softwarebundles" nsURI="https://org/eclipse/example/softwarebundles"
+    nsPrefix="org.eclipse.example.softwarebundles">
+  <eClassifiers xsi:type="ecore:EClass" name="Component">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="dependencies" upperBound="-1"
+        eType="#//Component" eKeys="#//Component/name"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="jarLocal" upperBound="-1"
+        eType="ecore:EClass jar.ecore#//Local"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="jarRemote" upperBound="-1"
+        eType="ecore:EClass jar.ecore#//Remote"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Bundle">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="components" unique="false"
+        lowerBound="1" upperBound="-1" eType="#//Component" eKeys="#//Component/name"/>
+  </eClassifiers>
+</ecore:EPackage>
